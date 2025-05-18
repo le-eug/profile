@@ -1,0 +1,139 @@
+#main_mode {
+    background: linear-gradient(90deg, #00a6ff 10%, #00162f 90%);
+}
+
+.profile_text {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.profile_box {
+    border-radius: 10%;
+    border: solid white;
+    padding: 10px;
+    text-align: center;
+    width: 35%;
+    background-color: lightblue;
+    
+    /* centered in the middle both vert and hor */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.profile_box > img {
+    width: 22.5%;
+    border-radius: 25%;
+    border:2px solid black;
+}
+
+.day_button_container, .night_button_container {
+    width:100px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.day_button_container {
+    left: 5%;
+}
+
+.night_button_container {
+    right: 5%;
+}
+
+a > img {
+    width:100%;
+}
+
+.enlarge {
+    transition: transform 0.2s ease;
+}
+
+.enlarge:hover {
+    transform: scale(1.05);
+}
+
+#night_mode {
+    background-color: #00162f;
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#night_intro, #day_intro {
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+#night_intro ul {
+    /* keeps bullets aligned in center */
+    list-style-position: inside; 
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.top4_container {
+    width: fit-content;
+    margin: 2rem auto;
+}
+
+.top4_caption {
+    margin-bottom:4px;
+}
+.four_entries {
+    display: flex;
+    justify-content: center;
+}
+
+.four_entries img {
+    width: 150px;
+    height: auto;
+    margin: 0 5px;
+}
+
+.four_entries {
+    display: flex;
+}
+
+#day_mode {
+    background-color: #00a6ff;
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#mode_header {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.game_clips {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.game_clips div {
+    width: 30%;
+    margin: 0 15px;
+}
+
+a.game_link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.game_caption {
+    margin:2px 0;
+}
+
+#my_links {
+    display: flex;
+    justify-content: center;
+}
+
+#my_links div {
+    width: 50px;
+    margin: 0 4rem;
+    margin-bottom: 1rem;
+}
