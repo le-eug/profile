@@ -1,18 +1,34 @@
 #main_mode {
-    background: linear-gradient(90deg, #00a6ff 10%, #00162f 90%);
+    background-image: url("images/main_background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh;
+}
+
+@font-face {
+    font-family: 'BasicText';
+    src: url(fonts/Minecraft.ttf);
+}
+
+@font-face {
+    font-family: 'HeaderText';
+    src: url(fonts/Mario-Kart-DS.ttf);
 }
 
 .profile_text {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'BasicText', Courier, monospace;
+}
+
+h2 {
+    font-family: 'HeaderText', Courier, monospace;
 }
 
 .profile_box {
-    border-radius: 10%;
-    border: solid white;
     padding: 10px;
     text-align: center;
-    width: 35%;
-    background-color: lightblue;
+    width: 25%;
     
     /* centered in the middle both vert and hor */
     position: absolute;
@@ -35,15 +51,19 @@
 }
 
 .day_button_container{
-    left:5%;
+    left:9%;
 }
 
 .night_button_container {
-    right:5%;
+    right:17%;
 }
 
 a > img {
     width:100%;
+}
+
+a > .button {
+    width:200%;
 }
 
 .enlarge {
@@ -55,9 +75,14 @@ a > img {
 }
 
 #night_mode {
-    background-color: #00162f;
+    background-image: url("images/night_background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
     color:white;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'BasicText', Courier, monospace;
 }
 
 #night_intro, #day_intro {
@@ -97,9 +122,16 @@ a > img {
 }
 
 #day_mode {
-    background-color: #00a6ff;
-    color:white;
-    font-family: 'Courier New', Courier, monospace;
+    background-image: url("images/day_background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: white;
+    font-family: 'BasicText', Courier, monospace;
+    
+    min-height: 100vh;  /* Make sure it fills at least the first viewport */
 }
 
 #mode_header {
@@ -152,7 +184,7 @@ a.game_link {
 
 .four_entries img:hover {
     transform:scale(1.05);
-    box-shadow: 0 0 12px yellow
+    box-shadow: 0 0 12px white
 }
 
 .back_main {
@@ -169,4 +201,21 @@ a.game_link {
 
 #night_back {
     left: 2.5%;
+}
+
+#overlay_strip_day, #overlay_strip_night {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 70vw;
+    height: 100vh;
+    transform: translateX(-50%);
+    
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    pointer-events: none;
+}
+
+#overlay_strip_night {
+    width: 55vw;
 }
