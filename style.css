@@ -219,3 +219,8 @@ a.game_link {
 #overlay_strip_night {
     width: 55vw;
 }
+
+#portfolio {
+    width:800px;
+    margin:0 auto;
+}
